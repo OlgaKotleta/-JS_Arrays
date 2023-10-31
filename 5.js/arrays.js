@@ -6,8 +6,7 @@ function task5(){
 
 return count;
 },0);
-alert(counter/arr.lenght);
-let arry=arr.lenght;
-alert(arry);
-//как узнать длину массива??
+ alert(counter/arr.length);
+
+
 }
