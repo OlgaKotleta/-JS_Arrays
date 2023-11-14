@@ -1,0 +1,63 @@
+<script>
+
+// function createPCLink(x){
+// return function(y){
+//   return `http://myshop.ru/${x}/${y}`;
+// };
+// }
+// let create=createPCLink("pc");
+// let create1=createPCLink("Notebooks");
+// let create2=createPCLink("Monitors");
+// +
+
+// console.log(create(1001));
+// console.log(create(404));
+// console.log(create(345));
+
+
+// let orders=[
+//     {
+//         fio:"Ivan",
+//         tovar:"phone",
+//         price:10000,
+//         quantity:2
+//     },
+//     {
+//         fio:"Peter",
+//         tovar:"usb",
+//         price:2300,
+//         quantity:5
+//     },
+//     {
+//         fio:"Mary",
+//         tovar:"connector",
+//         price:100,
+//         quantity:100
+//     },
+//    ]
+// function order(sale){
+
+//   console.log(`заказ сделал ${this.fio} на сумму ${this.quantity*this.price} скидка составила ${sale}`);
+  
+// }
+// orders.forEach(elem=>order.call(elem));
+
+
+
+// Изменить код метода wrapperA  таким образом, чтобы добавлялся анкор (текст) ссылки. Текст передавать массивом.
+function Menu(...navList){
+        this.navList=navList;
+        this.wrapperA=function(item){
+            return this.navList.map(elem=>`<a href='${elem}'>${item}</a>`);
+        }
+    }
+    let mainMenu=new Menu("home.html","services.html","price.html","about.html");
+    for (elem of mainMenu.navList)
+        console.log(elem);
+        console.log(mainMenu.wrapperA());
+    let footerMenu=new Menu("newPage.html","checkPage.html","seoPage.html");
+    for (elem of footerMenu.navList)
+        console.log(elem);
+        console.log(footerMenu.wrapperA()); 
+
+</script>
